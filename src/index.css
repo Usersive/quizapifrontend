@@ -28,13 +28,13 @@ html {
 body {
   min-height: 100vh;
   color: var(--color-light);
-  background: var(--color-darkest); /* Fallback solid color */
+  background: var(--color-darkest); /* Fallback solid color 
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                    url("images/library.jpg"); /* Overlay + Image */
+                    url("images/library.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  background-attachment: fixed; /* Keeps image in place */
+  background-attachment: fixed; 
 
   
 } */
