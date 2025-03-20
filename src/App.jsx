@@ -205,7 +205,7 @@ const App = ()=> {
           />
           )}
       </Main>
-      <p className='donot'>Once you start do not refresh else you will loose you score.</p>
+      
       <div className='footer-add'><p>&copy; 2025 HOREN TECH HUB</p></div>
     </div>
   )
