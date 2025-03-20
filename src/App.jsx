@@ -11,6 +11,7 @@ import FinishedScreen from './components/FinishedScreen';
 import Progress from './components/Progress';
 import Footer from './components/Footer';
 import Timer from './components/Timer';
+import PreventRefresh from './components/PreventRefresj';
 
 const App = ()=> {
   
@@ -34,32 +35,6 @@ const App = ()=> {
 
   const quizTotalScore = numQuestions * scorePerQuestion
 
-
-  // useEffect(() => {
-  //   api
-  //   .get("quiz_settings/")
-  //   .then(res => {
-  //     setSecondsPerQuestion(res.data.seconds_per_question);
-  //   })
-  //   .catch(err => {
-  //     console.log(err.message);
-  //     setError(err.message);
-  //   });
-
-  // }, []);
-
-  
-  // function getQuestion() {
-  //   api
-  //     .get("questions")
-  //     .then((res) => {
-  //       setQuestions(res.data);
-  //     })
-
-  //     .catch((err) => {
-  //       console.log(err.message);
-  //     });
-  // }
 
 
 
@@ -129,22 +104,23 @@ const App = ()=> {
 
 
 
- // warning not to reload the page or refresh the browser
- useEffect(() => {
-  const handleBeforeUnload = (event) => {
-    event.preventDefault();
-    event.returnValue = ""; // Required for some browsers to display the warning
-  };
+//  // warning not to reload the page or refresh the browser
+//  useEffect(() => {
+//   const handleBeforeUnload = (event) => {
+//     event.preventDefault();
+//     event.returnValue = ""; // Required for some browsers to display the warning
+//   };
 
-  window.addEventListener("beforeunload", handleBeforeUnload);
+//   window.addEventListener("beforeunload", handleBeforeUnload);
 
-  // Cleanup the event listener on component unmount
-  return () => {
-    window.removeEventListener("beforeunload", handleBeforeUnload);
-  };
-}, []);
+//   // Cleanup the event listener on component unmount
+//   return () => {
+//     window.removeEventListener("beforeunload", handleBeforeUnload);
+//   };
+// }, []);
 
 
+PreventRefresh();
 
 
 
