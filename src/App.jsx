@@ -11,7 +11,6 @@ import FinishedScreen from './components/FinishedScreen';
 import Progress from './components/Progress';
 import Footer from './components/Footer';
 import Timer from './components/Timer';
-import PreventRefresh from './components/PreventRefresj';
 
 const App = ()=> {
   
@@ -104,23 +103,21 @@ const App = ()=> {
 
 
 
-//  // warning not to reload the page or refresh the browser
-//  useEffect(() => {
-//   const handleBeforeUnload = (event) => {
-//     event.preventDefault();
-//     event.returnValue = ""; // Required for some browsers to display the warning
-//   };
+ // warning not to reload the page or refresh the browser
+ useEffect(() => {
+  const handleBeforeUnload = (event) => {
+    event.preventDefault();
+    event.returnValue = ""; // Required for some browsers to display the warning
+  };
 
-//   window.addEventListener("beforeunload", handleBeforeUnload);
+  window.addEventListener("beforeunload", handleBeforeUnload);
 
-//   // Cleanup the event listener on component unmount
-//   return () => {
-//     window.removeEventListener("beforeunload", handleBeforeUnload);
-//   };
-// }, []);
+  // Cleanup the event listener on component unmount
+  return () => {
+    window.removeEventListener("beforeunload", handleBeforeUnload);
+  };
+}, []);
 
-
-PreventRefresh();
 
 
 
@@ -208,6 +205,7 @@ PreventRefresh();
           />
           )}
       </Main>
+      <p className='donot'>Once you start do not refresh else you will loose you score.</p>
       <div className='footer-add'><p>&copy; 2025 HOREN TECH HUB</p></div>
     </div>
   )

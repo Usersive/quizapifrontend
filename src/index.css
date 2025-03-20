@@ -509,3 +509,14 @@ progress {
   padding: 1rem;
   font-size: 1.5rem;
 }
+
+.donot {
+  position: fixed;
+  bottom: 10;
+  left: 0;
+  width: 100%;
+  color: var(--color-light);
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.2rem;
+}
